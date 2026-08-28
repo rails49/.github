@@ -5,6 +5,10 @@ where they go next. [rails49.org](https://rails49.org)
 
 ### Repositories
 
+- **[control](https://github.com/rails49/control)** — scheduling, dispatching,
+  and driving trains. The research core is deadlock-free, high-throughput
+  dispatch: many trains sharing one layout without ever backing each other into
+  a corner.
 - **[occupancy](https://github.com/rails49/occupancy)** — camera-based track
   occupancy detection. Photograph the layout, mark the points you care about,
   train a ResNet-18 classifier, and watch it run live. Everything runs in the
@@ -15,9 +19,6 @@ where they go next. [rails49.org](https://rails49.org)
   and labels are CC BY 4.0.
 - **[rails49.org](https://github.com/rails49/rails49.org)** — the landing page
   at the apex, and where end-user documentation grows.
-- **control** *(to be released)* — scheduling, dispatching, and driving trains.
-  The research core is deadlock-free, high-throughput dispatch: many trains
-  sharing one layout without ever backing each other into a corner.
 
 ### Scale aware
 

@@ -2,9 +2,14 @@
 
 What one system is binding on across rails49's UIs, decided in
 [ADR-0003](adr/0003-the-look-rules-bind-place-colour-and-small-screens-not-code.md).
-This page holds the current values. A change to it is one pull request here,
-and its author files an issue in each consumer repository below. Each consumer
-keeps a test asserting that its values equal these.
+This page says what each token means and who is bound by it; the values are in
+[`tokens.css`](tokens.css) beside it, and neither restates the other
+([ADR-0005](adr/0005-the-look-rules-travel-as-a-copied-file-not-a-package.md)).
+
+Nothing installs `tokens.css`. A consumer copies it verbatim to a fixed path of
+its own and records the commit it came from; a test asserts that the values the
+consumer draws with equal that copy. A change here is one pull request, and its
+author files an issue in each consumer repository below.
 
 ## Who is bound
 
@@ -20,22 +25,23 @@ keeps a test asserting that its values equal these.
 
 The chrome keeps these values in both themes.
 
-| Token | Value | What it is |
-|---|---|---|
-| `--band` | `#1d4ed8` | the band across the top |
-| `--band-ink` | `#ffffff` | text and glyphs on the band |
-| `--rail` | `#064e3b` | the rail down the left |
-| `--rail-group` | `#059669` | a run of buttons that belong together on the rail |
+| Token | What it is |
+|---|---|
+| `--band` | the band across the top |
+| `--band-ink` | text and glyphs on the band |
+| `--rail` | the rail down the left |
+| `--rail-group` | a run of buttons that belong together on the rail |
 
 Red on the chrome means stop or a fault and nothing else. The first UI that
-draws an emergency stop on its band adds the value here.
+draws an emergency stop on its band adds the token to `tokens.css` and its line
+to the table above.
 
 ## Sizes
 
-| Name | Value | What it is |
-|---|---|---|
-| button | 44px | every button on the rail; the minimum a thumb needs |
-| rail turns | 640px | window height below which the rail becomes a horizontal strip |
+| Token | What it is |
+|---|---|
+| `--rail-button` | every button on the rail; the minimum a thumb needs |
+| `--rail-turns` | window height below which the rail becomes a horizontal strip |
 
 ## Theme
 

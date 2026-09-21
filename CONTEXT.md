@@ -75,7 +75,19 @@ _Avoid_: header, toolbar, menu bar
 **Look rules**:
 What one system is binding on across UIs: where a control sits, what a colour
 means, and how a small screen behaves. A set of named tokens and a written
-convention, held in [`docs/LOOK.md`](docs/LOOK.md); whole components and tool
-versions are not part of it
+convention; whole components and tool versions are not part of it
 ([ADR-0003](docs/adr/0003-the-look-rules-bind-place-colour-and-small-screens-not-code.md)).
+The convention and what each token means are in
+[`docs/LOOK.md`](docs/LOOK.md); the values are in
+[`docs/tokens.css`](docs/tokens.css) beside it, and nothing installs that file
+([ADR-0005](docs/adr/0005-the-look-rules-travel-as-a-copied-file-not-a-package.md)).
 _Avoid_: style guide, design system, theme (which is Shoelace's light or dark)
+
+**Reference copy**:
+A file a repository holds verbatim, with the commit it came from, solely so a
+test can compare against it. Nothing imports it and no build reads it — it is
+how a repository takes something shared without installing it, and the only
+thing it can tell you is that the repository has drifted from what it copied
+([ADR-0005](docs/adr/0005-the-look-rules-travel-as-a-copied-file-not-a-package.md)).
+_Avoid_: vendored copy, snapshot, fixture (which is test data a test reads as
+input)

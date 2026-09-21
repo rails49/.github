@@ -23,6 +23,7 @@ consumer repository below.
 | `occupancy` | everything |
 | dcc-ex UI | everything |
 | landing page (`rails49.org`) | tokens and band; no rail |
+| installation page (`installation`) | tokens and band; no rail |
 | JMRI | nothing |
 
 ## Tokens

@@ -39,8 +39,13 @@ parameter — `BOX_DOMAIN` — set when the box is installed, and it is either a
 domain bought for the box or a label in a zone the operator already runs
 ([ADR-0007](docs/adr/0007-an-installation-is-a-name-and-every-ui-is-a-label-under-it.md)).
 It names the box rather than the railroad loaded on it, and covers everything
-that reaches the box, ssh included. This project's own is one installation
-among the possible ones and gets no answer another cannot have
+that reaches the box, ssh included. What the installation itself is made of is
+four things and no more — the name, the certificate, the **door** and the
+**installation page** — so it is the base a box installs before any railroad,
+detector or command station
+([ADR-0009](docs/adr/0009-the-door-and-the-page-are-the-installations-in-a-repository-of-their-own.md)).
+This project's own is one installation among the possible ones and gets no
+answer another cannot have
 ([ADR-0004](docs/adr/0004-the-installation-serves-the-uis-that-are-about-it.md)).
 _Avoid_: deployment, instance, site (which is a compose profile in `control`)
 
@@ -49,10 +54,22 @@ The page at an installation's own name, listing the UIs that installation
 serves. A UI of its own, because its subject is the installation; served by the
 box, and a plain list of links under the look rules with no band and no rail
 ([ADR-0007](docs/adr/0007-an-installation-is-a-name-and-every-ui-is-a-label-under-it.md)).
+One link per label the box declares it serves, and nothing else known about any
+of them (ADR-0009).
 Not the **landing page**, which is the project's page at the apex of
 `rails49.org`, is about the project rather than any installation, and names
 none.
 _Avoid_: home page, index, dashboard, portal
+
+**Door**:
+The one thing in front of everything a browser reaches on a box. It holds the
+certificate for every label under the installation's name and sends each
+request on to the UI that label belongs to. It is the installation's rather
+than any app's, a box has exactly one, and each UI declares its own routes
+through it rather than being written into a table the door keeps
+([ADR-0009](docs/adr/0009-the-door-and-the-page-are-the-installations-in-a-repository-of-their-own.md)).
+_Avoid_: edge proxy, ingress, gateway, reverse proxy (what it is made of, not
+what it is)
 
 **Cloud copy**:
 A copy of a UI served from the cloud rather than by an installation. It
@@ -62,14 +79,15 @@ one and `control` cannot (ADR-0004).
 _Avoid_: demo, hosted version, public version
 
 **Face**:
-The door an app serves to clients that are not the bus: the store's HTTP
+The way in an app offers to clients that are not the bus: the store's HTTP
 routes, and the socket and routes an app serves to its own UI. A face is
 **shared** — specified, any UI may call it, and a change to it obliges its
 callers — or **private**: reached only by the UI it belongs to, on that UI's
 own origin, written down nowhere, and changed with that UI in one commit. A
 second caller is what ends privacy
 ([ADR-0002](docs/adr/0002-a-ui-talks-to-the-bus-the-store-and-its-own-apps-face.md)).
-_Avoid_: interface (the layout interface in `control`), endpoint, API
+_Avoid_: interface (the layout interface in `control`), endpoint, API, door
+(the installation's, in front of every UI on a box)
 
 **Counterparty**:
 One of the things a UI talks to: the bus, the store's face, or its own app's

@@ -8,8 +8,9 @@ and a repository's ADR that coined a term stays the authority for it.
 
 **UI**:
 A page a browser loads by an address of its own, about a subject of its own.
-The umbrella word: it covers the landing page, `occupancy`, `control`'s browser
-app and the dcc-ex UI, which the project builds, and JMRI's, which it does not.
+The umbrella word: it covers the landing page, an installation's own page,
+`occupancy`, `control`'s browser app and the dcc-ex UI, which the project
+builds, and JMRI's, which it does not.
 In prose `control`'s browser app is "the control UI"; its package keeps the
 name `ui`
 ([ADR-0001](docs/adr/0001-a-ui-of-its-own-is-about-something-other-than-the-loaded-railroad.md)).
@@ -32,11 +33,25 @@ _Avoid_: the layout (which is `control`'s layout interface)
 
 **Installation**:
 One person's running copy of the project: a box, the name it is reached at,
-its certificate, the documents in its store and the UIs it serves. This
-project's own — `layout.rails49.org` — is one installation among the possible
-ones and gets no answer another cannot have
+its certificate, the documents in its store and the UIs it serves. The name is
+the installation's own, and every UI it serves is one label under it —
+a domain bought for the box, or a label in a zone the operator already runs
+([ADR-0007](docs/adr/0007-an-installation-is-a-name-and-every-ui-is-a-label-under-it.md)).
+It names the box rather than the railroad loaded on it, and covers everything
+that reaches the box, ssh included. This project's own — `gleis49.org` — is one
+installation among the possible ones and gets no answer another cannot have
 ([ADR-0004](docs/adr/0004-the-installation-serves-the-uis-that-are-about-it.md)).
 _Avoid_: deployment, instance, site (which is a compose profile in `control`)
+
+**Installation page**:
+The page at an installation's own name, listing the UIs that installation
+serves. A UI of its own, because its subject is the installation; served by the
+box, and a plain list of links under the look rules with no band and no rail
+([ADR-0007](docs/adr/0007-an-installation-is-a-name-and-every-ui-is-a-label-under-it.md)).
+Not the **landing page**, which is the project's page at the apex of
+`rails49.org`, is about the project rather than any installation, and names
+none.
+_Avoid_: home page, index, dashboard, portal
 
 **Cloud copy**:
 A copy of a UI served from the cloud rather than by an installation. It

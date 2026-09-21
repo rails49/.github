@@ -140,6 +140,11 @@ at a LAN address, so nothing else of that domain can be on the web. That is
 what buying a domain for a box means, and it is fine when the domain was
 bought for the box.
 
+The cutover is [control#550](https://github.com/rails49/control/issues/550):
+the records, the route file, JMRI behind the door, this box's page, the one
+declaration that replaces five copies of a hostname, and ssh with them. The dev
+box moves in the same issue, to `control.dev.rails49.org`.
+
 Where the door and the installation's page finally live is not settled here.
 Both sit in `control`'s compose today, so a box that runs the dcc-ex UI and no
 railroad still installs `control` to have a door and a page. That is

@@ -156,10 +156,12 @@ the records, the route file, JMRI behind the door, this box's page, the
 `BOX_DOMAIN` that replaces five copies of a hostname, and ssh with them. The
 dev box moves in the same issue, to `control.dev.rails49.org`.
 
-Where the door and the installation's page finally live is not settled here.
-Both sit in `control`'s compose today, so a box that runs the dcc-ex UI and no
-railroad still installs `control` to have a door and a page. That is
-[its own ticket](https://github.com/rails49/.github/issues/12) on the map.
+Where the door and the installation's page live was not settled here. Both sat
+in `control`'s compose, so a box that ran the dcc-ex UI and no railroad still
+installed `control` to have a door and a page.
+[ADR-0009](0009-the-door-and-the-page-are-the-installations-in-a-repository-of-their-own.md)
+settles it: both move to `rails49/installation`, and the cutover above happens
+once, when they move.
 
 ## Considered
 
@@ -185,7 +187,9 @@ its own name.
 **An installation page generated from what is running**, by asking the proxy
 or the container daemon. It makes a static page into a small program to buy
 freshness a list of links does not need. One declaration cannot disagree with
-the routers, because the routers come from it.
+the routers, because the routers come from it. (ADR-0009 keeps the first
+sentence and drops the second: the routers come from each stack's own labels
+now, and a label listed on a box whose stack is not running is a dead link.)
 
 **A hand-written page per box**, kept beside the routers. It disagrees with
 them eventually, and the disagreement shows up as a dead link on the page a

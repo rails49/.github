@@ -34,12 +34,13 @@ _Avoid_: the layout (which is `control`'s layout interface)
 **Installation**:
 One person's running copy of the project: a box, the name it is reached at,
 its certificate, the documents in its store and the UIs it serves. The name is
-the installation's own, and every UI it serves is one label under it —
-a domain bought for the box, or a label in a zone the operator already runs
+the installation's own, and every UI it serves is one label under it. It is one
+parameter — `BOX_DOMAIN` — set when the box is installed, and it is either a
+domain bought for the box or a label in a zone the operator already runs
 ([ADR-0007](docs/adr/0007-an-installation-is-a-name-and-every-ui-is-a-label-under-it.md)).
 It names the box rather than the railroad loaded on it, and covers everything
-that reaches the box, ssh included. This project's own — `gleis49.org` — is one
-installation among the possible ones and gets no answer another cannot have
+that reaches the box, ssh included. This project's own is one installation
+among the possible ones and gets no answer another cannot have
 ([ADR-0004](docs/adr/0004-the-installation-serves-the-uis-that-are-about-it.md)).
 _Avoid_: deployment, instance, site (which is a compose profile in `control`)
 

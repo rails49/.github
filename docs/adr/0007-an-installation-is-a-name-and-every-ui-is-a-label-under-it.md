@@ -65,7 +65,11 @@ rules](../LOOK.md): no band, no rail, nothing live. What a person wants from
 it is a link, and a band on a page whose only job is to be left is ceremony.
 
 **A box says once what it is called and what it serves.** The installation's
-page and the proxy's routers both read that one declaration. Today the
+name is one parameter, set when the box is installed and written `BOX_DOMAIN`
+in this document; the installation's page and the proxy's routers both read it,
+and no file names a host. The exact spelling belongs to the repository that
+reads it — `control`'s environment is prefixed `TC49_` already — and only the
+shape is decided here. Today the
 hostname is written into six places in one route file — five router rules and
 the foreign-origin regex — and the file is chosen by `TC49_SITE`, so a
 stranger's only path is to fork it. A scheme that is stated but cannot be
@@ -91,27 +95,33 @@ The page is written once the system is built and tested against real hardware.
 
 ## What this makes of the names
 
-This project's own box takes a domain of its own, `gleis49.org`, and the dev
-box stays a label in the project's zone. Both shapes of the scheme therefore
-run here, which is the only honest test that both are supported.
+Every box, written against its own `BOX_DOMAIN`:
 
 | | |
 | --- | --- |
-| `gleis49.org` | the layout box's page, listing what that box serves |
-| `control.gleis49.org` | the control UI, with `/mqtt` and the store's routes on that origin |
-| `dccex.gleis49.org` | the dcc-ex UI, when it exists |
-| `jmri.gleis49.org` | JMRI's noVNC |
-| `occupancy.gleis49.org` | the box copy of the detector |
-| `dev.rails49.org` | the dev box's page |
-| `control.dev.rails49.org` | the control UI in development |
-| `rails49.org` | the project's page, in the cloud |
-| `occupancy.rails49.org` | the cloud copy of the detector |
+| `$BOX_DOMAIN` | the installation's page, listing what that box serves |
+| `control.$BOX_DOMAIN` | the control UI, with `/mqtt` and the store's routes on that origin |
+| `dccex.$BOX_DOMAIN` | the dcc-ex UI, where the command station is |
+| `jmri.$BOX_DOMAIN` | JMRI's noVNC, where JMRI runs |
+| `occupancy.$BOX_DOMAIN` | the box copy of the detector, where a camera is |
 
-An operator who owns `my-railway.org` and manages it at Cloudflare gets
-`my-railway.org` for the page, `control.my-railway.org`,
-`dccex.my-railway.org`, `jmri.my-railway.org`, a token with `DNS:Edit` on that
-zone, and DNS-only A records pointing at the box's LAN address. That is the
-whole of it, and it is why the scheme is written for them rather than for us.
+What an operator does: set `BOX_DOMAIN` at installation, hold a token with
+`DNS:Edit` on that zone, and point a DNS-only A record at the box's LAN
+address for the name and each label. Someone who owns `my-railway.org` sets
+`BOX_DOMAIN=my-railway.org`; someone who runs `example.org` already sets
+`BOX_DOMAIN=attic.example.org`. Nothing downstream can tell which they did.
+
+Two names are the project's rather than any installation's and are not under a
+`BOX_DOMAIN`: `rails49.org`, the project's page in the cloud, and
+`occupancy.rails49.org`, the cloud copy of the detector.
+
+### This project's own boxes
+
+Recorded here as an instance of the scheme and nothing more. The layout box
+sets `BOX_DOMAIN=gleis49.org`, a domain bought for it; the dev box sets
+`BOX_DOMAIN=dev.rails49.org`, a label in the project's zone, so the control UI
+in development is `control.dev.rails49.org`. Both shapes therefore run here,
+which is the only honest test that both are supported.
 
 ## Consequences
 
@@ -135,15 +145,16 @@ option and not a requirement.
 The broker's origin rule is already becoming a list under ADR-0004, one router
 per UI origin. This decision fixes what those origins are.
 
-A box at a domain's apex consumes that domain. `gleis49.org`'s A record points
-at a LAN address, so nothing else of that domain can be on the web. That is
-what buying a domain for a box means, and it is fine when the domain was
-bought for the box.
+A box whose `BOX_DOMAIN` is a whole domain consumes that domain. Its apex A
+record points at a LAN address, so nothing else of it can be on the web. That
+is what buying a domain for a box means, and it is fine when the domain was
+bought for the box. An operator who wants their domain for other things sets
+`BOX_DOMAIN` to a label under it instead.
 
 The cutover is [control#550](https://github.com/rails49/control/issues/550):
-the records, the route file, JMRI behind the door, this box's page, the one
-declaration that replaces five copies of a hostname, and ssh with them. The dev
-box moves in the same issue, to `control.dev.rails49.org`.
+the records, the route file, JMRI behind the door, this box's page, the
+`BOX_DOMAIN` that replaces five copies of a hostname, and ssh with them. The
+dev box moves in the same issue, to `control.dev.rails49.org`.
 
 Where the door and the installation's page finally live is not settled here.
 Both sit in `control`'s compose today, so a box that runs the dcc-ex UI and no

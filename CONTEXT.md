@@ -39,3 +39,19 @@ own origin, written down nowhere, and changed with that UI in one commit. A
 second caller is what ends privacy
 ([ADR-0002](docs/adr/0002-a-ui-talks-to-the-bus-the-store-and-its-own-apps-face.md)).
 _Avoid_: interface (the layout interface in `control`), endpoint, API
+
+**Chrome**:
+The band across the top and the rail down the left of a UI's page. The band is
+about the whole of the system that UI is about; the rail carries what the
+current view offers. Restated from `control`'s
+[ADR-0064](https://github.com/rails49/control/blob/main/docs/adr/0064-the-chrome-is-a-band-and-a-rail.md)
+so every repository reads the same line.
+_Avoid_: header, toolbar, menu bar
+
+**Look rules**:
+What one system is binding on across UIs: where a control sits, what a colour
+means, and how a small screen behaves. A set of named tokens and a written
+convention, held in [`docs/LOOK.md`](docs/LOOK.md); whole components and tool
+versions are not part of it
+([ADR-0003](docs/adr/0003-the-look-rules-bind-place-colour-and-small-screens-not-code.md)).
+_Avoid_: style guide, design system, theme (which is Shoelace's light or dark)

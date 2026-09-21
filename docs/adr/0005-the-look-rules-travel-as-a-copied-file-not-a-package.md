@@ -66,8 +66,11 @@ colour in one file is a good one that a linked stylesheet would break.
 only when a consumer edits its own values. A check that reached for this
 repository's tip would go red on someone else's commit, and under `control`'s
 rule that `main` moves only by a green required check with no bypass, that
-red-lights every open pull request in the consumer until someone syncs. For
-the same reason the check runs outside the required gate.
+red-lights every open pull request in the consumer until someone syncs. That
+reason is about fetching and stops there: a check that reads only files in the
+consumer's own repository runs with that repository's other tests, in its
+required gate if it has one
+([ADR-0010](0010-the-values-check-runs-in-the-consumers-gate-because-it-fetches-nothing.md)).
 
 **A change here is announced by hand.** Whoever changes `tokens.css` files an
 issue in each consumer repository, as ADR-0003 already says. Nothing is

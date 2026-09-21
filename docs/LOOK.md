@@ -8,8 +8,12 @@ This page says what each token means and who is bound by it; the values are in
 
 Nothing installs `tokens.css`. A consumer copies it verbatim to a fixed path of
 its own and records the commit it came from; a test asserts that the values the
-consumer draws with equal that copy. A change here is one pull request, and its
-author files an issue in each consumer repository below.
+consumer draws with equal that copy. That test reads only files in the
+consumer's own repository, so it runs with the consumer's other tests, in its
+required gate if it has one
+([ADR-0010](adr/0010-the-values-check-runs-in-the-consumers-gate-because-it-fetches-nothing.md)).
+A change here is one pull request, and its author files an issue in each
+consumer repository below.
 
 ## Who is bound
 

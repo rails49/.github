@@ -64,6 +64,19 @@ per counterparty it has, and never one indicator for all of them
 ([ADR-0004](docs/adr/0004-the-installation-serves-the-uis-that-are-about-it.md)).
 _Avoid_: backend, service, dependency
 
+**Bus contract**:
+What the bus promises and what may be published on it: the promises
+themselves, the four topic rules, the event inventory, the payload schemas and
+the device vocabulary. It is `control`'s and lives in `control/docs/BUS.md`,
+because every topic names a `control` component as its writer; a project that
+shares the bus is a client of `control`'s railroad rather than a co-owner of
+its definition
+([ADR-0006](docs/adr/0006-the-bus-contract-is-controls-and-travels-when-something-reads-it.md)).
+No repository outside `control` holds a copy, and the first one that reads it
+takes one with the commit recorded, as the look rules travel (ADR-0005).
+_Avoid_: protocol, schema, API, SYSTEM.md (`control`'s whole system, of which
+the contract is one part)
+
 **Chrome**:
 The band across the top and the rail down the left of a UI's page. The band is
 about the whole of the system that UI is about; the rail carries what the

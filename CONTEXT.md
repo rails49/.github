@@ -30,6 +30,21 @@ layout is not a document of the railroad. Restated from `control`'s
 [CONTEXT.md](https://github.com/rails49/control/blob/main/CONTEXT.md), **Railroad**.
 _Avoid_: the layout (which is `control`'s layout interface)
 
+**Installation**:
+One person's running copy of the project: a box, the name it is reached at,
+its certificate, the documents in its store and the UIs it serves. This
+project's own — `layout.rails49.org` — is one installation among the possible
+ones and gets no answer another cannot have
+([ADR-0004](docs/adr/0004-the-installation-serves-the-uis-that-are-about-it.md)).
+_Avoid_: deployment, instance, site (which is a compose profile in `control`)
+
+**Cloud copy**:
+A copy of a UI served from the cloud rather than by an installation. It
+reaches no installation's data — the bus refuses a foreign origin — so a UI
+has one only if it is useful with no installation behind it. `occupancy` has
+one and `control` cannot (ADR-0004).
+_Avoid_: demo, hosted version, public version
+
 **Face**:
 The door an app serves to clients that are not the bus: the store's HTTP
 routes, and the socket and routes an app serves to its own UI. A face is
@@ -39,6 +54,15 @@ own origin, written down nowhere, and changed with that UI in one commit. A
 second caller is what ends privacy
 ([ADR-0002](docs/adr/0002-a-ui-talks-to-the-bus-the-store-and-its-own-apps-face.md)).
 _Avoid_: interface (the layout interface in `control`), endpoint, API
+
+**Counterparty**:
+One of the things a UI talks to: the bus, the store's face, or its own app's
+face, and nothing else
+([ADR-0002](docs/adr/0002-a-ui-talks-to-the-bus-the-store-and-its-own-apps-face.md)).
+The browser's device APIs are not counterparties. A UI's band shows one state
+per counterparty it has, and never one indicator for all of them
+([ADR-0004](docs/adr/0004-the-installation-serves-the-uis-that-are-about-it.md)).
+_Avoid_: backend, service, dependency
 
 **Chrome**:
 The band across the top and the rail down the left of a UI's page. The band is

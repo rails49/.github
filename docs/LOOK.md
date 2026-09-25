@@ -60,9 +60,14 @@ Typeface and type scale are Shoelace's theme's.
 - The chrome is a band across the top and a rail down the left. The band is
   about the whole of the system the UI is about. The rail carries what the
   current view offers, and exists wherever a UI has commands.
-- The band's left holds the UI's name; its right holds its controls. A control
-  that exists in more than one UI sits in the same spot in each. A UI with no
-  such control draws nothing there.
+- The band's left names what the UI is about: the UI, the box or the loaded
+  railroad. It may be pressed to change which.
+- The band's right holds what is true of the whole system the UI is about,
+  pressable or not. A press that acts on the current view goes on the rail. A
+  UI with nothing to show there draws nothing.
+- Anything that shows in more than one UI sits in the same spot in each. Track
+  power is at the far right of the band; switching views is at the top of the
+  rail ([ADR-0012](adr/0012-the-band-says-what-the-ui-is-about-and-what-is-true-of-it.md)).
 - A colour says the same thing in every UI.
 - Where a glyph comes from is free. Its size and its place are not.
 - Whole components and tool versions are free.

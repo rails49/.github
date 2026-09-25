@@ -52,8 +52,10 @@ _Avoid_: deployment, instance, site (which is a compose profile in `control`)
 **Installation page**:
 The page at an installation's own name, listing the UIs that installation
 serves. A UI of its own, because its subject is the installation; served by the
-box, and a plain list of links under the look rules with no band and no rail
+box, and a plain list of links under the look rules with no rail
 ([ADR-0007](docs/adr/0007-an-installation-is-a-name-and-every-ui-is-a-label-under-it.md)).
+It takes the band, whose left carries the box's name
+([LOOK.md](docs/LOOK.md), #19).
 One link per label the box declares it serves, and nothing else known about any
 of them (ADR-0009).
 Not the **landing page**, which is the project's page at the apex of

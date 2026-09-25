@@ -36,10 +36,10 @@ The chrome keeps these values in both themes.
 | `--band-ink` | text and glyphs on the band |
 | `--rail` | the rail down the left |
 | `--rail-group` | a run of buttons that belong together on the rail |
+| `--stop` | the ground of an emergency stop or a fault on the chrome, and the outline and text of a stop press on the band before it is pressed |
+| `--stop-ink` | text on `--stop` |
 
-Red on the chrome means stop or a fault and nothing else. The first UI that
-draws an emergency stop on its band adds the token to `tokens.css` and its line
-to the table above.
+Red on the chrome means stop or a fault and nothing else.
 
 ## Sizes
 

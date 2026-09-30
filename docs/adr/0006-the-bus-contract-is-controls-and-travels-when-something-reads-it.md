@@ -107,6 +107,10 @@ that is the right size.
   repository and this rule fires there: a copy, a recorded commit, a test, and
   the inventory written to support that test. Which repository holds it is
   [issue #10](https://github.com/rails49/.github/issues/10).
+  *Amended 2026-09-30:* the first outside reader is `rails49/dccex`'s
+  translator, and it takes `control`'s `tc49` package as a dependency rather
+  than a copy
+  ([dccex ADR-0014](https://github.com/rails49/dccex/blob/main/docs/adr/0014-the-translator-is-on-the-bus-through-controls-package.md)).
 - `occupancy` owes its consumers an output specification of its own — SPEC.md
   fixes what L0 and L1 mean and says nothing about how either is served. That
   is `occupancy`'s, not this map's.

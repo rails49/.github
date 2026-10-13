@@ -40,10 +40,11 @@ domain bought for the box or a label in a zone the operator already runs
 ([ADR-0007](docs/adr/0007-an-installation-is-a-name-and-every-ui-is-a-label-under-it.md)).
 It names the box rather than the railroad loaded on it, and covers everything
 that reaches the box, ssh included. What the installation itself is made of is
-four things and no more — the name, the certificate, the **door** and the
-**installation page** — so it is the base a box installs before any railroad,
-detector or command station
-([ADR-0009](docs/adr/0009-the-door-and-the-page-are-the-installations-in-a-repository-of-their-own.md)).
+five things and no more — the name, the certificate, the **door**, the
+**installation page** and the service that turns the box off — so it is the
+base a box installs before any railroad, detector or command station
+([ADR-0009](docs/adr/0009-the-door-and-the-page-are-the-installations-in-a-repository-of-their-own.md),
+[ADR-0015](docs/adr/0015-a-ui-may-ask-the-installation-to-turn-the-box-off.md)).
 This project's own is one installation among the possible ones and gets no
 answer another cannot have
 ([ADR-0004](docs/adr/0004-the-installation-serves-the-uis-that-are-about-it.md)).

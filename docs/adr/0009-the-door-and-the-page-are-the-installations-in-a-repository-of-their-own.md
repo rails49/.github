@@ -1,5 +1,7 @@
 # The door and the page are the installation's, in a repository of their own
 
+*Amended by [ADR-0015](0015-a-ui-may-ask-the-installation-to-turn-the-box-off.md) (#32): a fifth thing every box has, the service that turns the box off.*
+
 Resolves [Where the installation's door and page live](https://github.com/rails49/.github/issues/12)
 on the [UI map](https://github.com/rails49/.github/issues/1).
 

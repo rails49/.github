@@ -53,10 +53,10 @@ _Avoid_: deployment, instance, site (which is a compose profile in `control`)
 **Installation page**:
 The page at an installation's own name, listing the UIs that installation
 serves. A UI of its own, because its subject is the installation; served by the
-box, and a plain list of links under the look rules with no rail
+box, and a plain list of links with no rail
 ([ADR-0007](docs/adr/0007-an-installation-is-a-name-and-every-ui-is-a-label-under-it.md)).
-It takes the band, whose left carries the box's name
-([LOOK.md](docs/LOOK.md), #19).
+It takes look's band, whose left carries the box's name
+([ADR-0016](docs/adr/0016-the-chrome-comes-from-look.md), #19).
 One link per label the box declares it serves, and nothing else known about any
 of them (ADR-0009).
 Not the **landing page**, which is the project's page at the apex of
@@ -110,34 +110,31 @@ shares the bus is a client of `control`'s railroad rather than a co-owner of
 its definition
 ([ADR-0006](docs/adr/0006-the-bus-contract-is-controls-and-travels-when-something-reads-it.md)).
 No repository outside `control` holds a copy, and the first one that reads it
-takes one with the commit recorded, as the look rules travel (ADR-0005).
+takes one with the commit recorded, as a **reference copy**.
 _Avoid_: protocol, schema, API, SYSTEM.md (`control`'s whole system, of which
 the contract is one part)
 
 **Chrome**:
 The band across the top and the rail down the left of a UI's page. The band is
 about the whole of the system that UI is about; the rail carries what the
-current view offers. Restated from `control`'s
-[ADR-0064](https://github.com/rails49/control/blob/main/docs/adr/0064-the-chrome-is-a-band-and-a-rail.md)
-so every repository reads the same line.
+current view offers. Every UI's chrome is drawn by **look**
+([ADR-0016](docs/adr/0016-the-chrome-comes-from-look.md)).
 _Avoid_: header, toolbar, menu bar
 
-**Look rules**:
-What one system is binding on across UIs: where a control sits, what a colour
-means, and how a small screen behaves. A set of named tokens and a written
-convention; whole components and tool versions are not part of it
-([ADR-0003](docs/adr/0003-the-look-rules-bind-place-colour-and-small-screens-not-code.md)).
-The convention and what each token means are in
-[`docs/LOOK.md`](docs/LOOK.md); the values are in
-[`docs/tokens.css`](docs/tokens.css) beside it, and nothing installs that file
-([ADR-0005](docs/adr/0005-the-look-rules-travel-as-a-copied-file-not-a-package.md)).
-_Avoid_: style guide, design system, theme (which is Shoelace's light or dark)
+**Look**:
+The package, `@rails49/look`, that draws every rails49 UI's chrome: the band,
+the rail, the dialogs and the Shoelace theme. It holds the values in
+`src/tokens.ts`, and what they mean, who takes the chrome, and the convention
+in `docs/LOOK.md`. A UI styles none of it
+([ADR-0016](docs/adr/0016-the-chrome-comes-from-look.md)).
+_Avoid_: look rules (the copied values and convention it replaced), style
+guide, design system, theme (which is Shoelace's light or dark)
 
 **Reference copy**:
 A file a repository holds verbatim, with the commit it came from, solely so a
 test can compare against it. Nothing imports it and no build reads it — it is
 how a repository takes something shared without installing it, and the only
 thing it can tell you is that the repository has drifted from what it copied
-([ADR-0005](docs/adr/0005-the-look-rules-travel-as-a-copied-file-not-a-package.md)).
+([ADR-0006](docs/adr/0006-the-bus-contract-is-controls-and-travels-when-something-reads-it.md)).
 _Avoid_: vendored copy, snapshot, fixture (which is test data a test reads as
 input)

@@ -1,5 +1,7 @@
 # An installation is a name, and every UI is a label under it
 
+*Amended by [ADR-0016](0016-the-chrome-comes-from-look.md) (#34): the installation page draws look's band, with the box's name on its left.*
+
 Resolves [How a person reaches a UI](https://github.com/rails49/.github/issues/9)
 on the [UI map](https://github.com/rails49/.github/issues/1).
 

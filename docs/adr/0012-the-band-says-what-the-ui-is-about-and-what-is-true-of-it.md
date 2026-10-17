@@ -2,6 +2,8 @@
 
 *Amended by [ADR-0014](0014-one-place-chooses-the-loaded-railroad-and-the-dcc-ex-ui-names-it.md) (#30): `control`'s left names the loaded railroad and is not pressed; the choice is in its settings dialog.*
 
+*Amended by [ADR-0016](0016-the-chrome-comes-from-look.md) (#34): look's band places status, the gear and track power on the right in that order.*
+
 Resolves [LOOK.md says the band's right holds controls; the UIs put status
 there](https://github.com/rails49/.github/issues/22), which the
 [UI map](https://github.com/rails49/.github/issues/1) did not chart. It was

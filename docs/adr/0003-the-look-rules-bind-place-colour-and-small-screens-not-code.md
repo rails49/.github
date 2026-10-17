@@ -1,5 +1,7 @@
 # The look rules bind place, colour and small screens, not code
 
+*Amended by [ADR-0016](0016-the-chrome-comes-from-look.md) (#34): the chrome is drawn by look, which holds the values; a consumer runs `look-check` and takes a release by a bump pull request.*
+
 Resolves [What one system is binding on, and what may differ](https://github.com/rails49/.github/issues/4)
 on the [UI map](https://github.com/rails49/.github/issues/1).
 

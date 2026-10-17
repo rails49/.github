@@ -1,140 +1,96 @@
 # rails49
 
-The words the rails49 repositories share. Each repository keeps a `CONTEXT.md`
-of its own for its own domain; this one holds only what crosses repositories,
-and a repository's ADR that coined a term stays the authority for it.
+The words used in more than one rails49 repository. Each repository keeps a
+`CONTEXT.md` of its own for its own words. Every entry links to the doc that
+owns it ([ADR-0017](docs/adr/0017-each-fact-has-one-owner-and-an-accepted-adr-does-not-change.md)).
 
 ## Language
 
 **UI**:
-A page a browser loads by an address of its own, about a subject of its own.
-The umbrella word: it covers the landing page, an installation's own page,
-`occupancy`, `control`'s browser app and the dcc-ex UI, which the project
-builds, and JMRI's, which it does not.
-In prose `control`'s browser app is "the control UI"; its package keeps the
+A page a browser loads by an address of its own, about a subject of its own:
+the landing page, an installation page, `occupancy`, the control UI, the dcc-ex
+UI and JMRI's. The control UI is `control`'s browser app; its package keeps the
 name `ui`
 ([ADR-0001](docs/adr/0001-a-ui-of-its-own-is-about-something-other-than-the-loaded-railroad.md)).
 _Avoid_: surface, frontend, app (a deployment unit in `control`)
 
 **View**:
-A way of showing or editing the loaded railroad inside the control UI's one
-page: today the editor, the run view, the stock view and the throttle. A view
-judges nothing. Restated from `control`'s
-[ADR-0038](https://github.com/rails49/control/blob/main/docs/adr/0038-the-ui-is-one-app-with-views-of-one-railroad.md)
-so every repository reads the same line.
-_Avoid_: screen, tab, page
+`control`'s word, owned by its
+[ADR-0038](https://github.com/rails49/control/blob/main/docs/adr/0038-the-ui-is-one-app-with-views-of-one-railroad.md).
 
 **Loaded railroad**:
-What `control`'s store lists under one name — a drawing, a roster, scenarios —
-plus its live run on the bus. Not the physical table: a photograph of the
-layout is not a document of the railroad. Restated from `control`'s
+`control`'s word, owned by its
 [CONTEXT.md](https://github.com/rails49/control/blob/main/CONTEXT.md), **Railroad**.
-_Avoid_: the layout (which is `control`'s layout interface)
 
 **Installation**:
 One person's running copy of the project: a box, the name it is reached at,
-its certificate, the documents in its store and the UIs it serves. The name is
-the installation's own, and every UI it serves is one label under it. It is one
-parameter — `BOX_DOMAIN` — set when the box is installed, and it is either a
-domain bought for the box or a label in a zone the operator already runs
-([ADR-0007](docs/adr/0007-an-installation-is-a-name-and-every-ui-is-a-label-under-it.md)).
-It names the box rather than the railroad loaded on it, and covers everything
-that reaches the box, ssh included. What the installation itself is made of is
-five things and no more — the name, the certificate, the **door**, the
-**installation page** and the service that turns the box off — so it is the
-base a box installs before any railroad, detector or command station
-([ADR-0009](docs/adr/0009-the-door-and-the-page-are-the-installations-in-a-repository-of-their-own.md),
-[ADR-0015](docs/adr/0015-a-ui-may-ask-the-installation-to-turn-the-box-off.md)).
-This project's own is one installation among the possible ones and gets no
-answer another cannot have
-([ADR-0004](docs/adr/0004-the-installation-serves-the-uis-that-are-about-it.md)).
+its certificate, the documents in its store and the UIs it serves. It names the
+box, not the railroad loaded on it
+([ADR-0007](docs/adr/0007-an-installation-is-a-name-and-every-ui-is-a-label-under-it.md),
+[ADR-0009](docs/adr/0009-the-door-and-the-page-are-the-installations-in-a-repository-of-their-own.md)).
 _Avoid_: deployment, instance, site (which is a compose profile in `control`)
 
 **Installation page**:
-The page at an installation's own name, listing the UIs that installation
-serves. A UI of its own, because its subject is the installation; served by the
-box, and a plain list of links with no rail
-([ADR-0007](docs/adr/0007-an-installation-is-a-name-and-every-ui-is-a-label-under-it.md)).
-It takes look's band, whose left carries the box's name
-([ADR-0016](docs/adr/0016-the-chrome-comes-from-look.md), #19).
-One link per label the box declares it serves, and nothing else known about any
-of them (ADR-0009).
-Not the **landing page**, which is the project's page at the apex of
-`rails49.org`, is about the project rather than any installation, and names
-none.
+The page at an installation's own name that lists the UIs the box serves
+([ADR-0007](docs/adr/0007-an-installation-is-a-name-and-every-ui-is-a-label-under-it.md),
+[ADR-0009](docs/adr/0009-the-door-and-the-page-are-the-installations-in-a-repository-of-their-own.md)).
+Not the **landing page**, the project's page at the apex of `rails49.org`,
+which names no installation.
 _Avoid_: home page, index, dashboard, portal
 
 **Door**:
 The one thing in front of everything a browser reaches on a box. It holds the
 certificate for every label under the installation's name and sends each
-request on to the UI that label belongs to. It is the installation's rather
-than any app's, a box has exactly one, and each UI declares its own routes
-through it rather than being written into a table the door keeps
+request to the UI that label belongs to
 ([ADR-0009](docs/adr/0009-the-door-and-the-page-are-the-installations-in-a-repository-of-their-own.md)).
 _Avoid_: edge proxy, ingress, gateway, reverse proxy (what it is made of, not
 what it is)
 
 **Cloud copy**:
-A copy of a UI served from the cloud rather than by an installation. It
-reaches no installation's data — the bus refuses a foreign origin — so a UI
-has one only if it is useful with no installation behind it. `occupancy` has
-one and `control` cannot (ADR-0004).
+A copy of a UI served from the cloud rather than by an installation. It reaches
+no installation's data
+([ADR-0004](docs/adr/0004-the-installation-serves-the-uis-that-are-about-it.md)).
 _Avoid_: demo, hosted version, public version
 
 **Face**:
 The way in an app offers to clients that are not the bus: the store's HTTP
 routes, and the socket and routes an app serves to its own UI. A face is
-**shared** — specified, any UI may call it, and a change to it obliges its
-callers — or **private**: reached only by the UI it belongs to, on that UI's
-own origin, written down nowhere, and changed with that UI in one commit. A
-second caller is what ends privacy
+**shared**, which any UI may call, or **private**, which only its own UI calls
 ([ADR-0002](docs/adr/0002-a-ui-talks-to-the-bus-the-store-and-its-own-apps-face.md)).
 _Avoid_: interface (the layout interface in `control`), endpoint, API, door
 (the installation's, in front of every UI on a box)
 
 **Counterparty**:
 One of the things a UI talks to: the bus, the store's face, or its own app's
-face, and nothing else
+face. The browser's device APIs are not counterparties
 ([ADR-0002](docs/adr/0002-a-ui-talks-to-the-bus-the-store-and-its-own-apps-face.md)).
-The browser's device APIs are not counterparties. A UI's band shows one state
-per counterparty it has, and never one indicator for all of them
-([ADR-0004](docs/adr/0004-the-installation-serves-the-uis-that-are-about-it.md)).
 _Avoid_: backend, service, dependency
 
 **Bus contract**:
-What the bus promises and what may be published on it: the promises
-themselves, the four topic rules, the event inventory, the payload schemas and
-the device vocabulary. It is `control`'s and lives in `control/docs/BUS.md`,
-because every topic names a `control` component as its writer; a project that
-shares the bus is a client of `control`'s railroad rather than a co-owner of
-its definition
+What the bus promises and what may be published on it: the promises, the topic
+rules, the event inventory, the payload schemas and the device vocabulary. It
+is `control`'s and lives in
+[`docs/BUS.md`](https://github.com/rails49/control/blob/main/docs/BUS.md)
 ([ADR-0006](docs/adr/0006-the-bus-contract-is-controls-and-travels-when-something-reads-it.md)).
-No repository outside `control` holds a copy, and the first one that reads it
-takes one with the commit recorded, as a **reference copy**.
 _Avoid_: protocol, schema, API, SYSTEM.md (`control`'s whole system, of which
 the contract is one part)
 
 **Chrome**:
-The band across the top and the rail down the left of a UI's page. The band is
-about the whole of the system that UI is about; the rail carries what the
-current view offers. Every UI's chrome is drawn by **look**
-([ADR-0016](docs/adr/0016-the-chrome-comes-from-look.md)).
+The band across the top and the rail down the left of a UI's page, drawn by
+**look** ([ADR-0016](docs/adr/0016-the-chrome-comes-from-look.md)).
 _Avoid_: header, toolbar, menu bar
 
 **Look**:
-The package, `@rails49/look`, that draws every rails49 UI's chrome: the band,
-the rail, the dialogs and the Shoelace theme. It holds the values in
-`src/tokens.ts`, and what they mean, who takes the chrome, and the convention
-in `docs/LOOK.md`. A UI styles none of it
+The package `@rails49/look`, which draws every rails49 UI's chrome. Its values
+and what they mean are in look's
+[`docs/LOOK.md`](https://github.com/rails49/look/blob/main/docs/LOOK.md)
 ([ADR-0016](docs/adr/0016-the-chrome-comes-from-look.md)).
-_Avoid_: look rules (the copied values and convention it replaced), style
-guide, design system, theme (which is Shoelace's light or dark)
+_Avoid_: look rules (formerly: the copied values and convention), style guide,
+design system, theme (which is Shoelace's light or dark)
 
 **Reference copy**:
-A file a repository holds verbatim, with the commit it came from, solely so a
-test can compare against it. Nothing imports it and no build reads it — it is
-how a repository takes something shared without installing it, and the only
-thing it can tell you is that the repository has drifted from what it copied
+A file a repository holds verbatim, with the commit it came from, only so a
+test can compare against it. Nothing imports it and no build reads it
 ([ADR-0006](docs/adr/0006-the-bus-contract-is-controls-and-travels-when-something-reads-it.md)).
 _Avoid_: vendored copy, snapshot, fixture (which is test data a test reads as
 input)

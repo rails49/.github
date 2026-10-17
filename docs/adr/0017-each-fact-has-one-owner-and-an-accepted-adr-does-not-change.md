@@ -1,6 +1,6 @@
 # Each fact has one owner, and an accepted ADR does not change
 
-Comes from the doc audit of 2026-10-17. Supersedes no ADR.
+Resolves [#37](https://github.com/rails49/.github/issues/37). Supersedes no ADR.
 
 The docs drift in two ways: they copy facts that live somewhere else, and
 accepted ADRs are edited in place. In `control`, 65 of 73 ADRs have more than

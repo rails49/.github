@@ -94,10 +94,9 @@ nothing can.
   compose file for a box copy wait for the decision in rule 4.
 - `CONTEXT.md` links **Cloud copy** here, and adds **Detector** and
   **Sensor**, each with its meaning in `control` and in `occupancy`.
-- Docs outside accepted ADRs that cite ADR-0004 move to this one, one issue
-  per repository: `dccex` (`docs/cutover.md`, `docs/ui/README.md`,
-  `docs/dccex_usb/README.md`) and `control`
-  (`docs/dispatcher/INTERNALS.md`).
+- One doc outside accepted ADRs cites ADR-0004: `installation`'s
+  `jmri/compose.yaml:53`, for one door per box. It moves to rule 6 here under
+  [installation#31](https://github.com/rails49/installation/issues/31).
 
 ## Considered
 

@@ -18,7 +18,7 @@ made every router a label on the container it routes to, on Traefik's docker
 provider, and deleted the route directory and the file provider with it.
 
 Neither addressed what the dev box's route file actually routes.
-[`deploy/routes/dev/site.yaml`](https://github.com/rails49/control/blob/main/deploy/routes/dev/site.yaml)
+[`deploy/routes/dev/site.yaml`](https://github.com/rails49/control/blob/11a2498/deploy/routes/dev/site.yaml)
 sends `dev.rails49.org` to `host.docker.internal:5173` — vite, a process on
 the developer's own machine — and `/mqtt` to a broker on the same host, with
 a copy of `control`'s foreign-origin refusal beside them.

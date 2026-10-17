@@ -12,8 +12,8 @@ where they go next. [rails49.org](https://rails49.org)
   Calibration is in dots-per-track, so a model trained on one layout transfers
   to another, from Z through G. [Launch the app](https://occupancy.rails49.org)
 - **[r49](https://github.com/rails49/r49)** (working) — the community corpus
-  of `.r49` layout archives: photographs, scale calibration, and labelled
-  markers. Images and labels are CC BY 4.0.
+  of `.r49` layout archives: photographs, scale calibration, sensor points,
+  and cars labelled by their two ends. Images and labels are CC BY 4.0.
 
 ### Run trains
 

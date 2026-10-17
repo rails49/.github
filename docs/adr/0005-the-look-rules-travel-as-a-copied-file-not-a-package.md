@@ -39,7 +39,9 @@ decides them.
 
 ## Decision
 
-**The values live in [`docs/tokens.css`](../tokens.css) in this repository,
+**The values live in
+[`docs/tokens.css`](https://github.com/rails49/.github/blob/c91e9be/docs/tokens.css)
+in this repository,
 beside `docs/LOOK.md`.** The map's rule that no code lives here means nothing
 that ships inside a UI's build. Six custom properties are the decision written
 in a form a machine can read, they collide with none of the paths GitHub

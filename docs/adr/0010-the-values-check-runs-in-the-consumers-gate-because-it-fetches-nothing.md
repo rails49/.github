@@ -61,7 +61,7 @@ when a consumer edits its own values.
   inside
   [`scripts/check.sh`](https://github.com/rails49/control/blob/main/scripts/check.sh)
   is what this decision asks for, and the reading recorded in
-  [`ui/look/README.md`](https://github.com/rails49/control/blob/main/ui/look/README.md)
+  [`ui/look/README.md`](https://github.com/rails49/control/blob/595876d/ui/look/README.md)
   is the rule now rather than a departure from one.
 - That README owes an edit all the same: it argues against a sentence that no
   longer exists. It gets an issue in `control`, the way any change here does

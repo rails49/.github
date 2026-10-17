@@ -80,7 +80,8 @@ versions free, and contradicting both here would buy nothing.
 
 **The look rules arrive with the first commit.** `dccex` is the first
 repository created since ADR-0005, so on its first day it copies
-[`docs/tokens.css`](../tokens.css) verbatim, records the commit it came from,
+[`docs/tokens.css`](https://github.com/rails49/.github/blob/799246f/docs/tokens.css)
+verbatim, records the commit it came from,
 and tests its own values against that copy. It fetches nothing.
 
 ## Consequences

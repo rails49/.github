@@ -1,5 +1,7 @@
 # The installation serves the UIs that are about it
 
+*Superseded by [ADR-0018](0018-a-ui-is-served-by-what-it-is-about-and-occupancy-is-served-from-the-cloud.md) (#40): `occupancy` is served from the cloud, and what reports its results is not decided.*
+
 Resolves [What serves each UI, and what that forces](https://github.com/rails49/.github/issues/6)
 on the [UI map](https://github.com/rails49/.github/issues/1).
 

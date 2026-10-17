@@ -49,7 +49,7 @@ what it is)
 **Cloud copy**:
 A copy of a UI served from the cloud rather than by an installation. It reaches
 no installation's data
-([ADR-0004](docs/adr/0004-the-installation-serves-the-uis-that-are-about-it.md)).
+([ADR-0018](docs/adr/0018-a-ui-is-served-by-what-it-is-about-and-occupancy-is-served-from-the-cloud.md)).
 _Avoid_: demo, hosted version, public version
 
 **Face**:
@@ -74,6 +74,26 @@ is `control`'s and lives in
 ([ADR-0006](docs/adr/0006-the-bus-contract-is-controls-and-travels-when-something-reads-it.md)).
 _Avoid_: protocol, schema, API, SYSTEM.md (`control`'s whole system, of which
 the contract is one part)
+
+**Detector**:
+Two meanings. In `occupancy`, the model that finds cars in a frame
+([its CONTEXT.md](https://github.com/rails49/occupancy/blob/main/CONTEXT.md)).
+In `control`, whatever watches a block end and publishes its state on the bus
+([its CONTEXT.md](https://github.com/rails49/control/blob/main/CONTEXT.md)).
+_Avoid_: using it for `occupancy`'s UI, or for whatever reports `occupancy`'s
+results
+([ADR-0018](docs/adr/0018-a-ui-is-served-by-what-it-is-about-and-occupancy-is-served-from-the-cloud.md))
+
+**Sensor**:
+Two meanings. In `occupancy`, a point on the layout where occupancy must be
+reported, keyed by an id of `occupancy`'s own
+([its CONTEXT.md](https://github.com/rails49/occupancy/blob/main/CONTEXT.md)).
+In `control`, a block end, `<block>.<end>`, which a detector's state topic is
+addressed by
+([its CONTEXT.md](https://github.com/rails49/control/blob/main/CONTEXT.md)).
+_Avoid_: using one meaning's id for the other; mapping an `occupancy` id to
+`<block>.<end>` is a translator's
+([ADR-0006](docs/adr/0006-the-bus-contract-is-controls-and-travels-when-something-reads-it.md))
 
 **Chrome**:
 The band across the top and the rail down the left of a UI's page, drawn by

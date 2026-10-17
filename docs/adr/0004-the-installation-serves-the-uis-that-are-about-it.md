@@ -13,7 +13,7 @@ table of four rows says nothing about the fifth UI, and it hides the fact that
 makes this a design question at all.
 
 That fact is in
-[`control/deploy/routes/layout/site.yaml`](https://github.com/rails49/control/blob/main/deploy/routes/layout/site.yaml):
+[`control/deploy/routes/layout/site.yaml`](https://github.com/rails49/control/blob/0e33738/deploy/routes/layout/site.yaml):
 the `layout-mqtt-foreign` router refuses the broker's WebSocket to any page
 whose `Origin` is not the layout's own name, and a page served over TLS cannot
 open a plain `ws://` to the broker either. A page served from the cloud

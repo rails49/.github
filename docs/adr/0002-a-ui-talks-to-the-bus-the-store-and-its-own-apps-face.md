@@ -5,7 +5,7 @@ on the [UI map](https://github.com/rails49/.github/issues/1).
 
 `control`'s UI reaches two things: the broker, as a client like any other,
 publishing only the rows
-[SYSTEM.md](https://github.com/rails49/control/blob/main/docs/SYSTEM.md#event-inventory)
+[BUS.md](https://github.com/rails49/control/blob/main/docs/BUS.md#event-inventory)
 marks `browser`; and the store's HTTP face. Both refuse a page on another
 origin
 ([ADR-0055](https://github.com/rails49/control/blob/main/docs/adr/0055-a-browser-is-not-on-the-lan-and-the-store-refuses-it.md),

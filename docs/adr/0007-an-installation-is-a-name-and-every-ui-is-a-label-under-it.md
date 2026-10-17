@@ -26,7 +26,7 @@ The origin is the whole of what this system's rules have to work with.
 makes a private face one reached only by the UI it belongs to, on that UI's
 own origin; ADR-0004 puts every counterparty on the UI's own origin; the
 broker's refusal in
-[`control/deploy/routes/layout/site.yaml`](https://github.com/rails49/control/blob/main/deploy/routes/layout/site.yaml)
+[`control/deploy/routes/layout/site.yaml`](https://github.com/rails49/control/blob/0e33738/deploy/routes/layout/site.yaml)
 is a comparison of one host, and
 [`lib/origin.py`](https://github.com/rails49/control/blob/main/src/tc49/lib/origin.py)
 is the same comparison at the store's face.

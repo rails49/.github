@@ -1,5 +1,7 @@
 # The look rules travel as a copied file, not a package
 
+*Superseded by [ADR-0016](0016-the-chrome-comes-from-look.md) (#34): the chrome is a package, and nothing is copied.*
+
 Resolves [Where shared UI code lives, and how a repo takes it](https://github.com/rails49/.github/issues/8)
 on the [UI map](https://github.com/rails49/.github/issues/1).
 

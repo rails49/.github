@@ -1,5 +1,7 @@
 # The values check runs in the consumer's gate, because it fetches nothing
 
+*Superseded by [ADR-0016](0016-the-chrome-comes-from-look.md) (#34): there is no values check; `look-check` is in every gate.*
+
 Resolves [Where the values check runs](https://github.com/rails49/.github/issues/16),
 which the [UI map](https://github.com/rails49/.github/issues/1) did not chart.
 It is [ADR-0005](0005-the-look-rules-travel-as-a-copied-file-not-a-package.md)

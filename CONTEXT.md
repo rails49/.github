@@ -100,6 +100,20 @@ The band across the top and the rail down the left of a UI's page, drawn by
 **look** ([ADR-0016](docs/adr/0016-the-chrome-comes-from-look.md)).
 _Avoid_: header, toolbar, menu bar
 
+**Band**:
+The part of the chrome across the top of a UI's page. Its left names what the
+UI is about; its right holds what is true of the whole system the UI is about
+(look's [`docs/LOOK.md`](https://github.com/rails49/look/blob/main/docs/LOOK.md#convention)).
+_Avoid_: header, top bar, nav, navbar, toolbar, title bar, status bar
+
+**Rail**:
+The part of the chrome down the left of a UI's page. It carries what the
+current view offers, and its first group switches views. It is never the
+track's steel
+(look's [`docs/LOOK.md`](https://github.com/rails49/look/blob/main/docs/LOOK.md#convention)).
+_Avoid_: sidebar, side nav, nav, navbar, drawer, menu, toolbar, the rails (the
+track's steel), strip (the rail on a short window)
+
 **Look**:
 The package `@rails49/look`, which draws every rails49 UI's chrome. Its values
 and what they mean are in look's

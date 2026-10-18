@@ -1,5 +1,7 @@
 # The band says what the UI is about, and what is true of it
 
+*Superseded by [ADR-0019](0019-the-band-starts-with-the-mark-and-the-ui-name.md) (#49): the band's left starts with the mark and the UI name.*
+
 *Amended by [ADR-0014](0014-one-place-chooses-the-loaded-railroad-and-the-dcc-ex-ui-names-it.md) (#30): `control`'s left names the loaded railroad and is not pressed; the choice is in its settings dialog.*
 
 *Amended by [ADR-0016](0016-the-chrome-comes-from-look.md) (#34): look's band places status, the gear and track power on the right in that order.*

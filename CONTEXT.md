@@ -101,10 +101,19 @@ The band across the top and the rail down the left of a UI's page, drawn by
 _Avoid_: header, toolbar, menu bar
 
 **Band**:
-The part of the chrome across the top of a UI's page. Its left names what the
-UI is about; its right holds what is true of the whole system the UI is about
+The part of the chrome across the top of a UI's page. Its left holds the mark,
+the UI name and what the UI is about; its right holds what is true of the whole
+system the UI is about
 (look's [`docs/LOOK.md`](https://github.com/rails49/look/blob/main/docs/LOOK.md#convention)).
 _Avoid_: header, top bar, nav, navbar, toolbar, title bar, status bar
+
+**Mark**:
+look's word, owned by its
+[`CONTEXT.md`](https://github.com/rails49/look/blob/main/CONTEXT.md).
+
+**UI name**:
+look's word, owned by its
+[`CONTEXT.md`](https://github.com/rails49/look/blob/main/CONTEXT.md).
 
 **Rail**:
 The part of the chrome down the left of a UI's page. It carries what the

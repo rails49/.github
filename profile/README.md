@@ -5,12 +5,13 @@ where they go next. [rails49.org](https://rails49.org)
 
 ### See where the trains are
 
-- **[occupancy](https://github.com/rails49/occupancy)** (working) —
-  camera-based track occupancy detection. Photograph the layout, mark the
-  points you care about, train a classifier, and watch it run live. Everything
-  runs in the browser, so your photographs never leave your machine.
-  Calibration is in dots-per-track, so a model trained on one layout transfers
-  to another, from Z through G. [Launch the app](https://occupancy.rails49.org)
+- **[occupancy](https://github.com/rails49/occupancy)** (alpha) —
+  camera-based track occupancy detection. Photograph the layout, mark the cars
+  and the sensors, and watch occupancy live, entirely in your browser. No
+  trained model is published yet, so the live view shows every sensor as
+  unknown. Calibration is in dots-per-track. The goal is a model trained on one
+  layout that transfers to another regardless of gauge, from Z through G.
+  [Launch the app](https://occupancy.rails49.org)
 - **[r49](https://github.com/rails49/r49)** (working) — the community corpus
   of `.r49` layout archives: photographs, scale calibration, sensor points,
   and cars labelled by their two ends. Images and labels are CC BY 4.0.

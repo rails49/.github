@@ -1,5 +1,7 @@
 # The band starts with the mark and the UI name
 
+*Superseded by [ADR-0020](0020-the-bands-right-ends-with-the-gear-and-help.md).*
+
 Resolves [#49](https://github.com/rails49/.github/issues/49). Supersedes
 [ADR-0012](0012-the-band-says-what-the-ui-is-about-and-what-is-true-of-it.md).
 

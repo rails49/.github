@@ -103,9 +103,13 @@ _Avoid_: header, toolbar, menu bar
 **Band**:
 The part of the chrome across the top of a UI's page. Its left holds the mark,
 the UI name and what the UI is about; its right holds what is true of the whole
-system the UI is about
+system the UI is about, then the gear and help
 (look's [`docs/LOOK.md`](https://github.com/rails49/look/blob/main/docs/LOOK.md#convention)).
 _Avoid_: header, top bar, nav, navbar, toolbar, title bar, status bar
+
+**Help**:
+look's word, owned by its
+[`CONTEXT.md`](https://github.com/rails49/look/blob/main/CONTEXT.md).
 
 **Mark**:
 look's word, owned by its

@@ -1,5 +1,7 @@
 # One place chooses the loaded railroad, and the dcc-ex UI names it
 
+*Superseded by [ADR-0020](0020-the-bands-right-ends-with-the-gear-and-help.md).*
+
 Resolves [#30](https://github.com/rails49/.github/issues/30). Amends
 [ADR-0012](0012-the-band-says-what-the-ui-is-about-and-what-is-true-of-it.md)
 and dccex

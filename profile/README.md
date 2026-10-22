@@ -12,6 +12,10 @@ where they go next. [rails49.org](https://rails49.org)
   unknown. Calibration is in dots-per-track. The goal is a model trained on one
   layout that transfers to another regardless of gauge, from Z through G.
   [Launch the app](https://occupancy.rails49.org)
+- **[detector](https://github.com/rails49/detector)** (alpha) — the model
+  behind occupancy: training-data export, training, and the browser runtime,
+  published as [`@rails49/detector`](https://www.npmjs.com/package/@rails49/detector).
+  No model has been released.
 - **[r49](https://github.com/rails49/r49)** (working) — the community corpus
   of `.r49` layout archives: photographs, scale calibration, sensor points,
   and cars labelled by their two ends. Images and labels are CC BY 4.0.

@@ -75,7 +75,7 @@ one every UI draws:
 ## Consequences
 
 - `docs/LOOK.md` here becomes a pointer to look's.
-- `CONTEXT.md` retires **Look rules** and adds **Look**. **Reference copy**
+- `GLOSSARY.md` retires **Look rules** and adds **Look**. **Reference copy**
   stays, for the bus contract
   ([ADR-0006](0006-the-bus-contract-is-controls-and-travels-when-something-reads-it.md)).
 - A consumer that does not merge a bump stays on its tag and keeps working;

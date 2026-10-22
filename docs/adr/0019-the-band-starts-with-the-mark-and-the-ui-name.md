@@ -67,7 +67,7 @@ the rules here take the place of ADR-0012's.
     build goes is the dcc-ex UI's to decide.
   - The landing page drops `Rails49` from its left.
   - The installation page owes nothing.
-- `CONTEXT.md` adds **Mark** and **UI name**, linking to look, and the
+- `GLOSSARY.md` adds **Mark** and **UI name**, linking to look, and the
   **Band** entry names them.
 - No doc outside accepted ADRs cites ADR-0012.
 

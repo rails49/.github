@@ -27,7 +27,7 @@ to talk to at all, which makes it the other half of
 ## Decision
 
 **A UI is served by whatever it is about.** A UI about a particular
-[installation](../../CONTEXT.md) — its railroad, its cameras, its command
+[installation](../../GLOSSARY.md) — its railroad, its cameras, its command
 station — is served by that installation's own box. A UI about the project
 rather than any installation is served from the cloud. This is
 [ADR-0001](0001-a-ui-of-its-own-is-about-something-other-than-the-loaded-railroad.md)'s

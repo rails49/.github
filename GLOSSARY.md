@@ -1,8 +1,8 @@
 # rails49
 
 The words used in more than one rails49 repository. Each repository keeps a
-`CONTEXT.md` of its own for its own words. Every entry links to the doc that
-owns it ([ADR-0017](docs/adr/0017-each-fact-has-one-owner-and-an-accepted-adr-does-not-change.md)).
+`GLOSSARY.md` of its own for its own words. Every entry links to the doc that
+owns it ([ADR-0021](docs/adr/0021-each-fact-has-one-owner-and-the-glossary-is-glossary-md.md)).
 
 ## Language
 
@@ -20,7 +20,7 @@ _Avoid_: surface, frontend, app (a deployment unit in `control`)
 
 **Loaded railroad**:
 `control`'s word, owned by its
-[CONTEXT.md](https://github.com/rails49/control/blob/main/CONTEXT.md), **Railroad**.
+[GLOSSARY.md](https://github.com/rails49/control/blob/main/GLOSSARY.md), **Railroad**.
 
 **Installation**:
 One person's running copy of the project: a box, the name it is reached at,
@@ -77,9 +77,9 @@ the contract is one part)
 
 **Detector**:
 Two meanings. In `occupancy`, the model that finds cars in a frame
-([its CONTEXT.md](https://github.com/rails49/occupancy/blob/main/CONTEXT.md)).
+([its GLOSSARY.md](https://github.com/rails49/occupancy/blob/main/GLOSSARY.md)).
 In `control`, whatever watches a block end and publishes its state on the bus
-([its CONTEXT.md](https://github.com/rails49/control/blob/main/CONTEXT.md)).
+([its GLOSSARY.md](https://github.com/rails49/control/blob/main/GLOSSARY.md)).
 _Avoid_: using it for `occupancy`'s UI, or for whatever reports `occupancy`'s
 results
 ([ADR-0018](docs/adr/0018-a-ui-is-served-by-what-it-is-about-and-occupancy-is-served-from-the-cloud.md))
@@ -87,10 +87,10 @@ results
 **Sensor**:
 Two meanings. In `occupancy`, a point on the layout where occupancy must be
 reported, keyed by an id of `occupancy`'s own
-([its CONTEXT.md](https://github.com/rails49/occupancy/blob/main/CONTEXT.md)).
+([its GLOSSARY.md](https://github.com/rails49/occupancy/blob/main/GLOSSARY.md)).
 In `control`, a block end, `<block>.<end>`, which a detector's state topic is
 addressed by
-([its CONTEXT.md](https://github.com/rails49/control/blob/main/CONTEXT.md)).
+([its GLOSSARY.md](https://github.com/rails49/control/blob/main/GLOSSARY.md)).
 _Avoid_: using one meaning's id for the other; mapping an `occupancy` id to
 `<block>.<end>` is a translator's
 ([ADR-0006](docs/adr/0006-the-bus-contract-is-controls-and-travels-when-something-reads-it.md))
@@ -109,15 +109,15 @@ _Avoid_: header, top bar, nav, navbar, toolbar, title bar, status bar
 
 **Help**:
 look's word, owned by its
-[`CONTEXT.md`](https://github.com/rails49/look/blob/main/CONTEXT.md).
+[`GLOSSARY.md`](https://github.com/rails49/look/blob/main/GLOSSARY.md).
 
 **Mark**:
 look's word, owned by its
-[`CONTEXT.md`](https://github.com/rails49/look/blob/main/CONTEXT.md).
+[`GLOSSARY.md`](https://github.com/rails49/look/blob/main/GLOSSARY.md).
 
 **UI name**:
 look's word, owned by its
-[`CONTEXT.md`](https://github.com/rails49/look/blob/main/CONTEXT.md).
+[`GLOSSARY.md`](https://github.com/rails49/look/blob/main/GLOSSARY.md).
 
 **Rail**:
 The part of the chrome down the left of a UI's page. It carries what the

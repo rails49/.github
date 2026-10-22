@@ -56,7 +56,7 @@ JMRI or Rocrail. Today it shows results on screen only.
 - **[rails49.org](https://github.com/rails49/rails49.org)** — the landing page
   at the apex, and where end-user documentation grows.
 - Terms shared across repositories are in
-  [CONTEXT.md](https://github.com/rails49/.github/blob/main/CONTEXT.md).
+  [GLOSSARY.md](https://github.com/rails49/.github/blob/main/GLOSSARY.md).
   Decisions that span repositories are in
   [docs/adr](https://github.com/rails49/.github/tree/main/docs/adr).
 

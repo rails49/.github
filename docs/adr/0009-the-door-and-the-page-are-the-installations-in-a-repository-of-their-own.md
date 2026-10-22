@@ -176,7 +176,7 @@ door, no shared anything. Two stacks cannot both hold 443, which ends it.
 reason to know any, edited every time a UI is added. The label is the name.
 
 **`rails49/box` as the name.** Shorter, and it reads well in an instruction.
-But CONTEXT.md has just made *installation* mean something precise, and a
+But GLOSSARY.md has just made *installation* mean something precise, and a
 second word for the same thing is how a glossary rots. A box is one part of
 what an installation is.
 

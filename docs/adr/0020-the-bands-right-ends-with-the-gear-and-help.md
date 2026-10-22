@@ -71,13 +71,13 @@ one ADR holds them.
 
 - look draws Help, takes the docs' address as an attribute of the band, puts
   the gear right of track power, and drops the UI name, Help and the gear when
-  the band does not fit. Its `docs/LOOK.md` and `CONTEXT.md` say so.
+  the band does not fit. Its `docs/LOOK.md` and `GLOSSARY.md` say so.
 - `control` moves its driving mode from the rail to the band, as the last of
   its items before track power.
 - The dcc-ex UI, `occupancy`, the installation page and the landing page owe
   nothing. Each shows Help after look's release.
 - Where each UI serves its docs is a later decision.
-- `CONTEXT.md` here adds **Help**, linking to look, and the **Band** entry
+- `GLOSSARY.md` here adds **Help**, linking to look, and the **Band** entry
   names the gear and Help.
 
 ## Considered

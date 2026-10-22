@@ -65,7 +65,7 @@ reads track power, and the page must not join `control`'s bus to read it
   time nobody is at the layout, and decision 5 stays.
 - When the box comes back, every train is placed again by hand: the broker
   keeps no retained row across a restart, and a train may have been moved
-  while the box was off (`control` CONTEXT.md, **Recovery**).
+  while the box was off (`control` GLOSSARY.md, **Recovery**).
 - The installation's page, occupancy and the dcc-ex UI owe nothing. Any of
   them may add the button later on the same two requests.
 

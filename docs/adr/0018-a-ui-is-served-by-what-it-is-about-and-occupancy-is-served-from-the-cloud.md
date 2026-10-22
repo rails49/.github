@@ -92,7 +92,7 @@ nothing can.
   `occupancy.$BOX_DOMAIN` label and
   [ADR-0009](0009-the-door-and-the-page-are-the-installations-in-a-repository-of-their-own.md)'s
   compose file for a box copy wait for the decision in rule 4.
-- `CONTEXT.md` links **Cloud copy** here, and adds **Detector** and
+- `GLOSSARY.md` links **Cloud copy** here, and adds **Detector** and
   **Sensor**, each with its meaning in `control` and in `occupancy`.
 - One doc outside accepted ADRs cites ADR-0004: `installation`'s
   `jmri/compose.yaml:53`, for one door per box. It moves to rule 6 here under

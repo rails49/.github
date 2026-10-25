@@ -22,6 +22,11 @@ _Avoid_: surface, frontend, app (a deployment unit in `control`)
 `control`'s word, owned by its
 [GLOSSARY.md](https://github.com/rails49/control/blob/main/GLOSSARY.md), **Railroad**.
 
+**Box**:
+The computer an installation runs on, with the apps on it. Text a person
+reads on a page calls it the **server**; code, ADRs and docs say box.
+_Avoid_: host, machine
+
 **Installation**:
 One person's running copy of the project: a box, the name it is reached at,
 its certificate, the documents in its store and the UIs it serves. It names the

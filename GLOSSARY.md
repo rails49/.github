@@ -146,3 +146,17 @@ test can compare against it. Nothing imports it and no build reads it
 ([ADR-0006](docs/adr/0006-the-bus-contract-is-controls-and-travels-when-something-reads-it.md)).
 _Avoid_: vendored copy, snapshot, fixture (which is test data a test reads as
 input)
+
+**Failure**:
+A condition on the railroad or in a program that holds until it clears or a
+person repairs it: a silent sensor, a link down, a broken lock-table rule.
+Not a bad payload, which arrives once and is dropped. What each kind does is
+[docs/OPERATING.md](docs/OPERATING.md).
+_Avoid_: fault, error, outage, crash (say collision, or that a program
+stopped)
+
+**Out of use**:
+What a failure takes while it holds: a block, a transit, a train or the whole
+railroad. Nothing is granted to it until use resumes. What each failure takes
+is [docs/OPERATING.md](docs/OPERATING.md).
+_Avoid_: blocked, disabled, failed

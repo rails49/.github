@@ -41,7 +41,8 @@ the trains a failure strands. A person repairs.
    the band names the silent app, and a person acts.
 4. **Not observed.** A wrong reading, a point that did not throw, a decoder
    that missed its packet, a district trip the station does not report, a
-   hand that moved a train. Not guarded. The consequences are accepted.
+   train lifted off without the UI being told, a hand that moved a train. Not
+   guarded. The consequences are accepted.
 
 ## Rules
 
@@ -73,11 +74,10 @@ the trains a failure strands. A person repairs.
 
 | Failure | Out of use | Use resumes when |
 | --- | --- | --- |
-| A sensor silent or `unknown` | Its block: no grant in, out or through, and a train the app drives towards it stops | The sensor reports |
-| A block reads occupied with no train claiming it | That block: no grant in | It reads clear, or a placement explains it |
-| A train whose block reads clear | That train: no grant | A placement |
+| A sensor silent or `unknown` | Its block: no grant in, out or through, and a train the app drives into it stops by the sensor that still reports, or at once if neither does | The sensor reports |
+| A sensor reads occupied where no train explains it | Its block: no grant in | The sensor reads clear, or a placement explains it |
 | A reported point lies wrong | The transit over it: the train waits (control [ADR-0097](https://github.com/rails49/control/blob/main/docs/adr/0097-a-reported-point-lies-where-device-point-says-and-a-train-waits-for-it.md)) | The point reports right |
-| A train that does not arrive within its allowance | That train: stopped, its route held | A person drives it to its sensor or places it |
+| A train that does not arrive within its allowance | That train: stopped, its route held | A person drives it to its sensor, places it or removes it |
 | A throttle silent | Nothing: the train is released, and in `automatic` the app drives it on; in `manual` it stops (control [ADR-0079](https://github.com/rails49/control/blob/main/docs/adr/0079-the-railroad-has-one-driving-mode-and-a-train-one-throttle.md), [ADR-0081](https://github.com/rails49/control/blob/main/docs/adr/0081-a-throttle-drives-outside-a-grant-and-a-release-keeps-its-speed.md)) | At once |
 | The station's link down | Everything: `state/power` reads `off` (control [ADR-0066](https://github.com/rails49/control/blob/main/docs/adr/0066-the-link-is-the-station-answering-not-the-socket-being-open.md)) | The link is up: `state/power` reads the supply's word again, with no press |
 | A district trip the station reports | The reason shows. With another district powered, nothing in control. With none left, everything: `state/power` reads `off` | The station or a person resets it |

@@ -91,14 +91,12 @@ results
 
 **Sensor**:
 Two meanings. In `occupancy`, a point on the layout where occupancy must be
-reported, keyed by an id of `occupancy`'s own
+reported, keyed by an id the person sets in the editor to the name the
+controller knows
 ([its GLOSSARY.md](https://github.com/rails49/occupancy/blob/main/GLOSSARY.md)).
-In `control`, a point near a block end, `<block>.<end>`, which a detector's
-state topic is addressed by
+In `control`, a point near a block end, `<block>.<end>`, which a report names
 ([its GLOSSARY.md](https://github.com/rails49/control/blob/main/GLOSSARY.md)).
-_Avoid_: using one meaning's id for the other; mapping an `occupancy` id to
-`<block>.<end>` is a translator's
-([ADR-0006](docs/adr/0006-the-bus-contract-is-controls-and-travels-when-something-reads-it.md))
+_Avoid_: a translator mapping an `occupancy` id to `<block>.<end>`
 
 **Occupancy service**:
 `occupancy-service`'s word, owned by its

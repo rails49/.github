@@ -100,6 +100,14 @@ _Avoid_: using one meaning's id for the other; mapping an `occupancy` id to
 `<block>.<end>` is a translator's
 ([ADR-0006](docs/adr/0006-the-bus-contract-is-controls-and-travels-when-something-reads-it.md))
 
+**Occupancy service**:
+`occupancy-service`'s word, owned by its
+[`GLOSSARY.md`](https://github.com/rails49/occupancy-service/blob/main/GLOSSARY.md).
+
+**Live contract**:
+`occupancy-service`'s word, owned by its
+[`GLOSSARY.md`](https://github.com/rails49/occupancy-service/blob/main/GLOSSARY.md).
+
 **Chrome**:
 The band across the top and the rail down the left of a UI's page, drawn by
 **look** ([ADR-0016](docs/adr/0016-the-chrome-comes-from-look.md)).

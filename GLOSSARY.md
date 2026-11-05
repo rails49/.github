@@ -83,7 +83,7 @@ the contract is one part)
 **Detector**:
 Two meanings. In `occupancy`, the model that finds cars in a frame
 ([its GLOSSARY.md](https://github.com/rails49/occupancy/blob/main/GLOSSARY.md)).
-In `control`, whatever watches a block end and publishes its state on the bus
+In `control`, whatever reports on sensors and publishes its state on the bus
 ([its GLOSSARY.md](https://github.com/rails49/control/blob/main/GLOSSARY.md)).
 _Avoid_: using it for `occupancy`'s UI, or for whatever reports `occupancy`'s
 results
@@ -93,8 +93,8 @@ results
 Two meanings. In `occupancy`, a point on the layout where occupancy must be
 reported, keyed by an id of `occupancy`'s own
 ([its GLOSSARY.md](https://github.com/rails49/occupancy/blob/main/GLOSSARY.md)).
-In `control`, a block end, `<block>.<end>`, which a detector's state topic is
-addressed by
+In `control`, a point near a block end, `<block>.<end>`, which a detector's
+state topic is addressed by
 ([its GLOSSARY.md](https://github.com/rails49/control/blob/main/GLOSSARY.md)).
 _Avoid_: using one meaning's id for the other; mapping an `occupancy` id to
 `<block>.<end>` is a translator's

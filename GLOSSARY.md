@@ -43,6 +43,13 @@ Not the **landing page**, the project's page at the apex of `rails49.org`,
 which names no installation.
 _Avoid_: home page, index, dashboard, portal
 
+**Installation release**:
+The numbered set of every stack's images, tested together, that a box runs.
+A box runs the stacks it declares from one installation release. Say it in
+full outside `installation`; in `dccex` a release is a firmware's
+([#71](https://github.com/rails49/.github/issues/71)).
+_Avoid_: version, tag, deployment, release (outside `installation`)
+
 **Door**:
 The one thing in front of everything a browser reaches on a box. It holds the
 certificate for every label under the installation's name and sends each

@@ -8,7 +8,8 @@ Every stack was built on the box: `deploy.sh` ran `git pull` and
 no programming experience cannot install or update a box that way, and a box
 needed a clone, git and build tools for every stack. #71 settled how images
 are built and released on 2026-11-11. The first full release, `2026.11.1`, was
-checked on `gleis49` and `pi49` and marked on 2026-11-12.
+checked on a 2018 Mac mini (Ubuntu 26.04, amd64) and a Raspberry Pi (arm64)
+and marked on 2026-11-12.
 
 ## Decision
 
@@ -38,8 +39,8 @@ checked on `gleis49` and `pi49` and marked on 2026-11-12.
 6. **A release is checked twice before a box is offered it.** CI starts it
    from its own files on both architectures, with the simulator and no
    hardware; a failure means no release. Then it is a pre-release, installed
-   by hand on `gleis49` and `pi49` and run with trains. Marking it a full
-   release is what offers it to every other box. CI cannot run trains.
+   by hand on a 2018 Mac mini and a Raspberry Pi and run with trains. Marking
+   it a full release is what offers it to every other box. CI cannot run trains.
 7. **The development loop still builds on the box.** `deploy.sh` stays in
    every stack, and each compose file carries both `image:` and `build:`. A
    local build is named by its commit like a published one and reaches a box

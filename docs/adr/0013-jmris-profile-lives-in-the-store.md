@@ -65,8 +65,8 @@ quit DecoderPro and PanelPro first and open them again after
   is on, and only by *Back up now* while it is off. Until then a restore is
   refused, naming the `jmri/` files, as for any document not backed up.
 - The installation's `jmri` project builds an image rather than pulling one.
-- The live roster on gleis49 moves once, by hand; the old volume is kept until
-  a restore of `jmri/` has been checked.
+- The live roster on the layout box moves once, by hand; the old volume is kept
+  until a restore of `jmri/` has been checked.
 
 ## Considered
 

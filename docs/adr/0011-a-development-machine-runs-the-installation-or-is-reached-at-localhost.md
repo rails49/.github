@@ -7,8 +7,8 @@ found while planning
 the effort that moves the door out of `control`.
 
 [ADR-0007](0007-an-installation-is-a-name-and-every-ui-is-a-label-under-it.md)
-named the dev box `dev.rails49.org`, a label in the project's zone, so the
-control UI in development is `control.dev.rails49.org`. It recorded that name
+named the dev box with a label in the project's zone, so the control UI in
+development is a `control` label under that one. It recorded that name
 for a reason: the layout box takes a domain bought for it, the dev box takes a
 label in a zone the project already runs, and both shapes therefore run here,
 which is the only honest test that both are supported.
@@ -19,7 +19,7 @@ provider, and deleted the route directory and the file provider with it.
 
 Neither addressed what the dev box's route file actually routes.
 [`deploy/routes/dev/site.yaml`](https://github.com/rails49/control/blob/11a2498/deploy/routes/dev/site.yaml)
-sends `dev.rails49.org` to `host.docker.internal:5173` — vite, a process on
+sends the dev box's name to `host.docker.internal:5173` — vite, a process on
 the developer's own machine — and `/mqtt` to a broker on the same host, with
 a copy of `control`'s foreign-origin refusal beside them.
 
@@ -27,7 +27,7 @@ a copy of `control`'s foreign-origin refusal beside them.
 
 The docker provider discovers routers from the labels on containers. A process
 on the host has no container, so there is nothing for a label to be on. Vite is
-a process on the host, and it is what `dev.rails49.org` is pointed at today.
+a process on the host, and it is what the dev box's name is pointed at today.
 
 Every other name in the scheme is served by a container that can declare its
 own router. This one is served by a development server a developer starts by
@@ -46,9 +46,9 @@ what a developer editing a file has anyway. Below, *the dev box* is this
 project's own development machine, the one ADR-0007 named; the rule is about
 any development machine.
 
-**The dev box keeps its name.** `dev.rails49.org` is the box name of a
-development machine running the installation, which is the same thing
-`gleis49.org` is for the layout box. ADR-0007's reason survives intact: the
+**The dev box keeps its name.** Its label in the project's zone is the box
+name of a development machine running the installation, as the domain bought
+for the layout box is that box's name. ADR-0007's reason survives intact: the
 project's own boxes still demonstrate both name shapes, a domain bought for a
 box and a label in a zone the operator already runs. The name is the box's.
 What the dev route file pointed it at is vite, and that pointing is what ends
@@ -77,7 +77,7 @@ make, and writing it back into that document would make the record say it had
 considered a case it did not see.
 
 ADR-0007 is not edited either. Its cutover line — "The dev box moves in the
-same issue, to `control.dev.rails49.org`" — still holds for the machine
+same issue, to a `control` label under its own" — still holds for the machine
 running the installation, which is the only place that name is now served.
 
 ## Consequences
@@ -88,7 +88,7 @@ host and a foreign-origin refusal in front of them, and none of the three is
 behind a door any more.
 
 The name survives elsewhere in that repository, with the reason for it gone:
-`allowedHosts: ["dev.rails49.org"]` in
+an `allowedHosts` entry naming the dev box in
 [`ui/vite.config.ts`](https://github.com/rails49/control/blob/main/ui/vite.config.ts),
 and the sentences in `scripts/dev.sh`, `ui/README.md` and `docs/DEPLOY.md`
 that explain why vite is reached by that name. Vite is told about a host
@@ -105,7 +105,7 @@ macOS host's loopback. Whether to simplify either is `control`'s call, in an
 issue there, and is no part of this decision.
 
 A developer who wants the real shape installs the installation on their own
-machine and sets `BOX_DOMAIN=dev.rails49.org`. They get the door, a
+machine and sets `BOX_DOMAIN=dev.example.org`. They get the door, a
 certificate per label and `control`'s own container serving its built UI,
 which is what an operator receives and what running it is for.
 

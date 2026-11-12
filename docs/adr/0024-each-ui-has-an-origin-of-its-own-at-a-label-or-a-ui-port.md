@@ -13,16 +13,16 @@ and each has run on a box:
 
 - [installation#53](https://github.com/rails49/installation/issues/53): a box
   with no certificate serves every UI on a UI port over plain HTTP. Run on
-  `pi49` on 2026-11-11.
+  a Raspberry Pi on 2026-11-11.
 - [#60](https://github.com/rails49/.github/issues/60): an occupancy service on
   the box reports occupancy, and the box serves a copy of `occupancy`. Runs on
-  `gleis49`.
+  the layout box, a 2018 Mac mini.
 - [#69](https://github.com/rails49/.github/issues/69): one origin check, the
-  installation's, on every way in. Run on `gleis49` on 2026-11-11.
+  installation's, on every way in. Run on the layout box on 2026-11-11.
 - [installation#69](https://github.com/rails49/installation/issues/69): the
   install script makes a box with no certificate, and the setup page takes no
-  DNS token. Run on `test49` (amd64) and `pi49` (arm64) on 2026-11-12, each
-  installed from the README alone.
+  DNS token. Run on a fresh Ubuntu 26.04 box (amd64) and a Raspberry Pi
+  (arm64) on 2026-11-12, each installed from the README alone.
 
 [ADR-0021](0021-each-fact-has-one-owner-and-the-glossary-is-glossary-md.md)
 lets no ADR amend another, so this one supersedes both in full. It restates
@@ -195,7 +195,7 @@ nothing can.
   control ADR-0042: the resolver becomes a single point of failure for the
   internet and not only for the railroad.
 - **Admitting origins from a list of names.** The door's `/mqtt` routers did,
-  and refused a page at `gleis49.org:8082` that every other path admitted
+  and refused a page at `example.org:8082` that every other path admitted
   (#69).
 - **The DNS token on the setup page.** It would cross plain HTTP.
 - **An installation page generated from what is running,** by asking the

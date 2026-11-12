@@ -1,5 +1,7 @@
 # An installation is a name, and every UI is a label under it
 
+*Superseded by [ADR-0024](0024-each-ui-has-an-origin-of-its-own-at-a-label-or-a-ui-port.md) (rails49/installation#53): a box name is optional, and every UI is also on a UI port over plain HTTP.*
+
 *Amended by [ADR-0016](0016-the-chrome-comes-from-look.md) (#34): the installation page draws look's band, with the box's name on its left.*
 
 Resolves [How a person reaches a UI](https://github.com/rails49/.github/issues/9)

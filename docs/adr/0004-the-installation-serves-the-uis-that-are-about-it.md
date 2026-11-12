@@ -132,7 +132,7 @@ The broker's origin rule becomes a list. One Traefik router per UI origin,
 each naming its own, replacing the single `layout-mqtt-foreign` regex. The
 store needs no change at all.
 
-JMRI moves. `http://192.168.178.56:6901` stops being how it is reached, and
+JMRI moves. The box's address on port 6901 stops being how it is reached, and
 what replaces it is [How a person reaches a
 UI](https://github.com/rails49/.github/issues/9) to name.
 

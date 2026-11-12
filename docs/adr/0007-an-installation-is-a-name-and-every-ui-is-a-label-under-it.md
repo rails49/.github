@@ -9,9 +9,9 @@ on the [UI map](https://github.com/rails49/.github/issues/1).
 
 A person reaching this project's UIs today remembers four names and a port:
 `rails49.org` for the landing page, `occupancy.rails49.org`,
-`layout.rails49.org` for the control UI, `dev.rails49.org` when it is being
-worked on, and `http://192.168.178.56:6901` for JMRI. The dcc-ex UI would add
-a fifth.
+`layout.rails49.org` for the control UI, a dev label in `rails49.org` when it
+is being worked on, and the box's address on port 6901 for JMRI. The dcc-ex UI
+would add a fifth.
 
 The list is the smaller half of the problem. The larger half is that
 `rails49.org` belongs to this project. Another person running this software
@@ -122,10 +122,10 @@ Two names are the project's rather than any installation's and are not under a
 ### This project's own boxes
 
 Recorded here as an instance of the scheme and nothing more. The layout box
-sets `BOX_DOMAIN=gleis49.org`, a domain bought for it; the dev box sets
-`BOX_DOMAIN=dev.rails49.org`, a label in the project's zone, so the control UI
-in development is `control.dev.rails49.org`. Both shapes therefore run here,
-which is the only honest test that both are supported.
+sets `BOX_DOMAIN` to a domain bought for it; the dev box sets it to a label in
+the project's zone, so the control UI in development is a `control` label
+under that one. Both shapes therefore run here, which is the only honest test
+that both are supported.
 
 ## Consequences
 
@@ -158,7 +158,7 @@ bought for the box. An operator who wants their domain for other things sets
 The cutover is [control#550](https://github.com/rails49/control/issues/550):
 the records, the route file, JMRI behind the door, this box's page, the
 `BOX_DOMAIN` that replaces five copies of a hostname, and ssh with them. The
-dev box moves in the same issue, to `control.dev.rails49.org`.
+dev box moves in the same issue, to a `control` label under its own.
 
 Where the door and the installation's page live was not settled here. Both sat
 in `control`'s compose, so a box that ran the dcc-ex UI and no railroad still

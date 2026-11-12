@@ -1,5 +1,7 @@
 # A UI is served by what it is about, and occupancy is served from the cloud
 
+*Superseded by [ADR-0024](0024-each-ui-has-an-origin-of-its-own-at-a-label-or-a-ui-port.md) (rails49/installation#53): a box name is optional, and `occupancy` also has a box copy, whose occupancy service reports.*
+
 Resolves [#40](https://github.com/rails49/.github/issues/40). Supersedes
 [ADR-0004](0004-the-installation-serves-the-uis-that-are-about-it.md).
 

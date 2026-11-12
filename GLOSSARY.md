@@ -31,13 +31,13 @@ _Avoid_: host, machine
 One person's running copy of the project: a box, the name it is reached at,
 its certificate, the documents in its store and the UIs it serves. It names the
 box, not the railroad loaded on it
-([ADR-0007](docs/adr/0007-an-installation-is-a-name-and-every-ui-is-a-label-under-it.md),
+([ADR-0024](docs/adr/0024-each-ui-has-an-origin-of-its-own-at-a-label-or-a-ui-port.md),
 [ADR-0009](docs/adr/0009-the-door-and-the-page-are-the-installations-in-a-repository-of-their-own.md)).
 _Avoid_: deployment, instance, site (which is a compose profile in `control`)
 
 **Installation page**:
 The page at an installation's own name that lists the UIs the box serves
-([ADR-0007](docs/adr/0007-an-installation-is-a-name-and-every-ui-is-a-label-under-it.md),
+([ADR-0024](docs/adr/0024-each-ui-has-an-origin-of-its-own-at-a-label-or-a-ui-port.md),
 [ADR-0009](docs/adr/0009-the-door-and-the-page-are-the-installations-in-a-repository-of-their-own.md)).
 Not the **landing page**, the project's page at the apex of `rails49.org`,
 which names no installation.
@@ -61,7 +61,7 @@ what it is)
 **Cloud copy**:
 A copy of a UI served from the cloud rather than by an installation. It reaches
 no installation's data
-([ADR-0018](docs/adr/0018-a-ui-is-served-by-what-it-is-about-and-occupancy-is-served-from-the-cloud.md)).
+([ADR-0024](docs/adr/0024-each-ui-has-an-origin-of-its-own-at-a-label-or-a-ui-port.md)).
 _Avoid_: demo, hosted version, public version
 
 **Face**:
@@ -94,7 +94,7 @@ In `control`, whatever reports on sensors and publishes its state on the bus
 ([its GLOSSARY.md](https://github.com/rails49/control/blob/main/GLOSSARY.md)).
 _Avoid_: using it for `occupancy`'s UI, or for whatever reports `occupancy`'s
 results
-([ADR-0018](docs/adr/0018-a-ui-is-served-by-what-it-is-about-and-occupancy-is-served-from-the-cloud.md))
+([ADR-0024](docs/adr/0024-each-ui-has-an-origin-of-its-own-at-a-label-or-a-ui-port.md))
 
 **Sensor**:
 Two meanings. In `occupancy`, a point on the layout where occupancy must be

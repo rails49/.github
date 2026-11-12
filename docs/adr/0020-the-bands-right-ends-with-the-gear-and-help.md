@@ -1,5 +1,7 @@
 # The band's right ends with the gear and Help
 
+*Rule 2 superseded by [rails49/look#42](https://github.com/rails49/look/issues/42): on a UI served by a box the mark links to the box's installation page; a page with no UI name keeps `https://rails49.org`.*
+
 Resolves [#52](https://github.com/rails49/.github/issues/52). Supersedes
 [ADR-0014](0014-one-place-chooses-the-loaded-railroad-and-the-dcc-ex-ui-names-it.md)
 and

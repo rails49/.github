@@ -3,6 +3,11 @@
 Software for running model railroads: seeing where the trains are, and deciding
 where they go next. [rails49.org](https://rails49.org)
 
+Everything here is alpha and changes without notice. Features come and go,
+and formats change without a migration. An installation that is running is
+not supported. Updating to the latest release may fix a problem, or it may
+mean starting fresh.
+
 ## See where the trains are
 
 - **[occupancy](https://github.com/rails49/occupancy)** (alpha) —
@@ -16,7 +21,7 @@ where they go next. [rails49.org](https://rails49.org)
   behind occupancy: training-data export, training, and the browser runtime,
   published as [`@rails49/detector`](https://www.npmjs.com/package/@rails49/detector).
   No model has been released.
-- **[r49](https://github.com/rails49/r49)** (working) — the community corpus
+- **[r49](https://github.com/rails49/r49)** (alpha) — the community corpus
   of `.r49` layout archives: photographs, scale calibration, sensor points,
   and cars labelled by their two ends. Images and labels are CC BY 4.0.
 
@@ -30,7 +35,7 @@ where they go next. [rails49.org](https://rails49.org)
   DCC-EX command station, and the processes that connect the station to
   control and JMRI.
 - **[CommandStation-EX](https://github.com/rails49/CommandStation-EX)**
-  (working) — our fork of the DCC-EX firmware for the EX-CSB1 command station.
+  (alpha) — our fork of the DCC-EX firmware for the EX-CSB1 command station.
   [What the fork changes](https://github.com/rails49/CommandStation-EX#readme)
 - **[jmri](https://github.com/rails49/jmri)** (planned) — a translator between
   control and JMRI.

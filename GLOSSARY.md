@@ -2,7 +2,7 @@
 
 The words used in more than one rails49 repository. Each repository keeps a
 `GLOSSARY.md` of its own for its own words. Every entry links to the doc that
-owns it ([ADR-0021](docs/adr/0021-each-fact-has-one-owner-and-the-glossary-is-glossary-md.md)).
+owns it ([ADR-0025](docs/adr/0025-each-fact-has-one-owner-and-an-adr-is-written-after-its-decision-has-run.md)).
 
 ## Language
 

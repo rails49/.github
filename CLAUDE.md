@@ -2,14 +2,12 @@
 
 ## Agent skills
 
-### Issue tracker
+The rules every rails49 repository shares are this repository's
+`docs/agents/`: `issue-tracker.md`, `triage-labels.md` and `domain.md`.
 
-GitHub Issues on rails49/.github, via the `gh` CLI. See `docs/agents/issue-tracker.md`.
-
-### Triage labels
-
-The five default labels, unchanged: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`. See `docs/agents/triage-labels.md`.
-
-### Domain docs
-
-Single-context: `GLOSSARY.md` and `docs/adr/` at the repo root. See `docs/agents/domain.md`.
+- Issue tracker: GitHub Issues on rails49/.github, via the `gh` CLI.
+- Triage labels: `needs-triage`, `needs-info`, `ready-for-agent`,
+  `ready-for-human`, `wontfix`.
+- Domain docs: `GLOSSARY.md` and `docs/adr/` at the repo root. What each kind
+  of doc holds:
+  [ADR-0025](docs/adr/0025-each-fact-has-one-owner-and-an-adr-is-written-after-its-decision-has-run.md).

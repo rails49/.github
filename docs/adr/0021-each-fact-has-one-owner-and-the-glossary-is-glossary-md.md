@@ -1,5 +1,7 @@
 # Each fact has one owner, and the glossary is GLOSSARY.md
 
+*Superseded by [ADR-0025](0025-each-fact-has-one-owner-and-an-adr-is-written-after-its-decision-has-run.md).*
+
 Resolves [#54](https://github.com/rails49/.github/issues/54). Supersedes
 [ADR-0017](0017-each-fact-has-one-owner-and-an-accepted-adr-does-not-change.md).
 
